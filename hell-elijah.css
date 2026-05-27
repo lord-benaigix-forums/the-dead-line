@@ -1,0 +1,59 @@
+.firma-container {
+    width: 300px;
+    height: 150px;
+    border: 8px solid;
+    border-image: linear-gradient(135deg, #b423ed 0%, #000000 100%) 1;
+    position: relative;
+  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.segundo-marco {
+   width: 100%;
+    height: 95%;
+    border: 4px solid;
+    border-image: linear-gradient(135deg, #000000 0%, #b423ed 100%) 1;
+    position: relative;
+  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .imagen-personaje {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Capa oscura (overlay) oculta por defecto */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    cursor: pointer;
+  }
+
+  /* Texto dentro del overlay */
+  .overlay p {
+    color: #b423ed;
+    font-family: serif;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Efecto hover */
+  .firma-container:hover .overlay {
+    opacity: 1;
+  }
